@@ -1,0 +1,41 @@
+https://www.mongodb.com/try/download/mongosync
+https://www.npmjs.com/package/dotenv
+
+https://dev.to/nditah/how-to-setup-nodejs-mongodb-in-production-server-on-ubuntu-1804-in-aws-gcp-azure-digital-ocean-cloud-instance-or-locally-16hk 
+https://www.digitalocean.com/community/tutorials/how-to-set-up-a-node-js-application-for-production-on-ubuntu-20-04
+https://www.digitalocean.com/community/tutorials/how-to-install-mongodb-on-ubuntu-20-04
+https://www.digitalocean.com/community/tutorials/how-to-back-up-restore-and-migrate-a-mongodb-database-on-ubuntu-20-04
+
+https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-20-04-es
+
+https://stackoverflow.com/questions/73656873/unable-to-install-mongodb-in-ubuntu-22-04-mongodb-org-libssl1-1
+
+USER:ROOT
+PASSWORD: V^VVNdi7Rgy3AvEQ#KM
+
+
+admin y tienda
+server {
+
+   listen 80;
+   root /var/www/front_dominio_deploy/dist;
+   index index.html index.htm index.nginx-debian.html;
+
+   server_name admin.dominio.com;
+
+   location / {
+      try_files $uri $uri/ /index.html;
+   }
+}
+
+pm2 start npm -- run start
+
+PASOS:
+ BACKUPS, VARIABLES DE ENTERNO Y COMPILACIÓN DE LOS PROYECTOS
+ CREACIÓN DE DROPLET Y UNIÓN DE LOS DNS
+ CONFIGURACIÓN BASICA DE LOS DROPLETS
+ GITHUB DE LOS PROYECTOS
+ INSTLACIÓN DE PM2 Y MONGODB RESTORE, CLONAR NUESTRO REPOSITORIOS EN EL DROPLET
+ CONFIGURAR LOS SITE-AVALIBLE
+
+sudo ln -s /etc/nginx/sites-available/travellist /etc/nginx/sites-enabled/
